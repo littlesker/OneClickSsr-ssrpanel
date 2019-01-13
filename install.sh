@@ -47,7 +47,7 @@ echo /usr/local/lib > /etc/ld.so.conf.d/usr_local_lib.conf
 ldconfig
 echo 正在配置ssr
 cd /root
-git clone https://github.com/mzfqy/shadowsocksr >/dev/null 2>&1
+git clone https://github.com/littlesker/shadowsocksr >/dev/null 2>&1
 chmod 777 * -R
 mv ssr /bin/ssr
 mv restartssr /bin/restartssr
