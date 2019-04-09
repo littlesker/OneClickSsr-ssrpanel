@@ -23,6 +23,7 @@ systemctl disable firewalld.service>/dev/null 2>&1
 iptables -F
 service iptables save >/dev/null 2>&1
 echo 正在配置准备环境
+yum install -y python-setuptools m2crypto -y >/dev/null 2>&1
 yum remove nc -y >/dev/null 2>&1
 yum install git -y >/dev/null 2>&1
 easy_install pip >/dev/null 2>&1
