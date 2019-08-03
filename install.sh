@@ -46,6 +46,7 @@ make -j2 >/dev/null 2>&1
 make install >/dev/null 2>&1
 echo /usr/local/lib > /etc/ld.so.conf.d/usr_local_lib.conf
 ldconfig
+pip install greenlet gevent M2Crypto >/dev/null 2>&1
 echo 正在配置ssr
 cd /root
 git clone https://github.com/littlesker/shadowsocksr >/dev/null 2>&1
