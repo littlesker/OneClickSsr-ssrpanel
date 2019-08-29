@@ -16,6 +16,7 @@ echo "请输入 节点ID > " ;read nid
 echo "请输入 节点费率 > " ;read nfee
 echo Starting......
 echo 正在设置时区
+sed -i 's/ftp.us.debian.org/opensource.nchc.org.tw/g' /etc/apt/sources.list >/dev/null 2>&1
 cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime -r >/dev/null 2>&1
 echo 正在关闭防火墙
 systemctl stop firewalld.service >/dev/null 2>&1
