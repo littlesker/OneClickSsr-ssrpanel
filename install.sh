@@ -28,10 +28,7 @@ yum remove nc -y >/dev/null 2>&1
 yum install git -y >/dev/null 2>&1
 easy_install pip >/dev/null 2>&1
 cd /root
-wget https://raw.githubusercontent.com/mzfqy/OneClickSsr-ssrpanel/master/cron >/dev/null 2>&1
-wget https://raw.githubusercontent.com/mzfqy/OneClickSsr-ssrpanel/master/ssr >/dev/null 2>&1
 wget https://raw.githubusercontent.com/mzfqy/OneClickSsr-ssrpanel/master/ncat-7.60-1.x86_64.rpm>/dev/null 2>&1
-wget https://raw.githubusercontent.com/mzfqy/OneClickSsr-ssrpanel/master/restartssr>/dev/null 2>&1
 rpm -ivh ncat-7.60-1.x86_64.rpm >/dev/null 2>&1
 ln -s /usr/bin/ncat /bin/nc >/dev/null 2>&1
 cd /root
@@ -51,9 +48,6 @@ echo 正在配置ssr
 cd /root
 git clone https://github.com/littlesker/shadowsocksr >/dev/null 2>&1
 chmod 777 * -R
-mv ssr /bin/ssr
-mv restartssr /bin/restartssr
-crontab cron
 cd shadowsocksr
 ./setup_cymysql2.sh >/dev/null 2>&1
 pip install -r requestment.txt >/dev/null 2>&1
